@@ -418,3 +418,63 @@ void BattleSequence(int cannonRange, int distance)
 }
 
 */
+
+// Part Two Object Oriented Programming
+// Level 16 
+
+// Simulas Test
+string command;
+
+ChestState currentChestState = new ChestState();
+while (true)
+{
+    Console.Write($"The chest is {currentChestState}. What do you want to do? ");
+
+    switch (currentChestState)
+    {
+        case ChestState.Locked:
+            Console.WriteLine("Type unlock to unlock.");
+            command = Console.ReadLine().ToLower();
+            if (command != "unlock")
+            {
+                Console.WriteLine("Not a valid command, try again");
+            }
+            else
+                currentChestState = ChestState.Closed;
+            break;
+
+        case ChestState.Closed:
+            Console.WriteLine("Type open or lock.");
+            command = Console.ReadLine().ToLower();
+            if (command != "open" && command != "lock")
+            {
+                Console.WriteLine("Not a valid command, try again");
+            }
+            else if (command == "open")
+                currentChestState = ChestState.Open;
+            else
+                currentChestState = ChestState.Locked;
+            break;
+
+        case ChestState.Open:
+            Console.WriteLine("Type close to close");
+            command = Console.ReadLine().ToLower();
+            if (command != "close")
+            {
+                Console.WriteLine("Not a valid command, try again");
+            }
+            else
+                currentChestState = ChestState.Closed;
+            break;
+    }
+
+}
+
+
+enum ChestState
+{
+    Locked,
+    Closed,
+    Open
+}
+
