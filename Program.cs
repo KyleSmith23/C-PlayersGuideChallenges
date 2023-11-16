@@ -316,6 +316,8 @@ Console.WriteLine(number);
 
 // Level 14 BOSS BATTLE Hunting the Manticore
 
+/*
+
 int manticoreHealth = 10;
 int cityHealth = 15;
 int round = 1;
@@ -415,3 +417,4 @@ void BattleSequence(int cannonRange, int distance)
     }
 }
 
+*/
