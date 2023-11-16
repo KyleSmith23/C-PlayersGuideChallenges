@@ -430,6 +430,7 @@ while (true)
 {
     Console.Write($"The chest is {currentChestState}. What do you want to do? ");
 
+
     switch (currentChestState)
     {
         case ChestState.Locked:
@@ -438,6 +439,7 @@ while (true)
             if (command != "unlock")
             {
                 Console.WriteLine("Not a valid command, try again");
+                Console.WriteLine();
             }
             else
                 currentChestState = ChestState.Closed;
@@ -449,6 +451,7 @@ while (true)
             if (command != "open" && command != "lock")
             {
                 Console.WriteLine("Not a valid command, try again");
+                Console.WriteLine();
             }
             else if (command == "open")
                 currentChestState = ChestState.Open;
@@ -462,6 +465,7 @@ while (true)
             if (command != "close")
             {
                 Console.WriteLine("Not a valid command, try again");
+                Console.WriteLine();
             }
             else
                 currentChestState = ChestState.Closed;
