@@ -556,7 +556,7 @@ while (true)
 
     Console.WriteLine($"The final cost will be {finalCost}");
 }
-float GetCost(string arrowhead, string arrowtail, double arrowlength)
+float GetCost(string arrowhead, string arrowtail, int arrowlength)
 {
     float a = 0;
     float b = 0;
