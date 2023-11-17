@@ -423,6 +423,8 @@ void BattleSequence(int cannonRange, int distance)
 // Level 16 
 
 // Simulas Test
+
+/*
 string command;
 
 ChestState currentChestState = new ChestState();
@@ -481,4 +483,6 @@ enum ChestState
     Closed,
     Open
 }
+*/
+
 
