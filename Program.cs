@@ -485,4 +485,71 @@ enum ChestState
 }
 */
 
+// Level 17 Simula's Soup
 
+(string SoupType, string Main, string Seasoning) soup = ("","","");
+
+Type soupType = new Type();
+MainIngredient mainIngredient = new MainIngredient();
+Seasoning seasoning = new Seasoning();
+
+Console.WriteLine("Choose from - Soup, Stew or Gumbo?");
+string userInput = Console.ReadLine().ToLower();
+
+switch (userInput)
+{
+    case "soup": soupType = Type.Soup; break;
+    case "stew": soupType = Type.Stew; break;
+    case "gumbo": soupType = Type.Gumbo; break;
+}
+
+soup.SoupType = Convert.ToString(soupType);
+
+Console.WriteLine("Choose from - Mushroom, Chicken, Carrot or Potato?");
+userInput = Console.ReadLine().ToLower();
+
+switch (userInput)
+{
+    case "mushroom": mainIngredient = MainIngredient.Mushroom; break;
+    case "chicken": mainIngredient = MainIngredient.Chicken; break;
+    case "carrot": mainIngredient = MainIngredient.Carrot; break;
+    case "potato": mainIngredient = MainIngredient.Potato; break;
+}
+
+soup.Main = Convert.ToString(mainIngredient);
+
+Console.WriteLine("Choose from - Spicy, Salty or Sweet?");
+userInput = Console.ReadLine().ToLower();
+
+switch (userInput)
+{
+    case "salty": seasoning = Seasoning.Salty; break;
+    case "spicy": seasoning = Seasoning.Spicy; break;
+    case "sweet": seasoning = Seasoning.Sweet; break;
+}
+
+soup.Seasoning = Convert.ToString(seasoning);
+
+Console.WriteLine(soup);
+
+enum Type
+{
+    Soup,
+    Stew,
+    Gumbo
+}
+
+enum MainIngredient
+{
+    Mushroom,
+    Chicken,
+    Carrot,
+    Potato
+}
+
+enum Seasoning
+{
+    Spicy,
+    Salty,
+    Sweet
+}
