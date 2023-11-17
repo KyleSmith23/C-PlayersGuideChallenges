@@ -487,6 +487,8 @@ enum ChestState
 
 // Level 17 Simula's Soup
 
+/*
+
 (string SoupType, string Main, string Seasoning) soup = ("","","");
 
 Type soupType = new Type();
@@ -532,3 +534,4 @@ Console.WriteLine(soup);
 enum Type { Soup, Stew, Gumbo }
 enum MainIngredient { Mushroom, Chicken, Carrot, Potato }
 enum Seasoning { Spicy, Salty, Sweet }
+*/
