@@ -535,3 +535,45 @@ enum Type { Soup, Stew, Gumbo }
 enum MainIngredient { Mushroom, Chicken, Carrot, Potato }
 enum Seasoning { Spicy, Salty, Sweet }
 */
+
+// Level 18 Vin Fletcher's Arrows
+
+Arrow newArrow = new Arrow();
+
+
+while (true)
+{
+    Console.Write("Choose an arrowhead - steel, wood or obsidian. ");
+    newArrow.arrowHead = Console.ReadLine().ToLower();
+
+    Console.Write("Choose a fletching type - plastic, turkey feathers or goose feathers. ");
+    newArrow.arrowTail = Console.ReadLine().ToLower();
+
+    Console.WriteLine("Choose a length in CM.");
+    newArrow.arrowLength = Convert.ToInt32(Console.ReadLine());
+
+    float finalCost = GetCost(newArrow.arrowHead, newArrow.arrowTail, newArrow.arrowLength);
+
+    Console.WriteLine($"The final cost will be {finalCost}");
+}
+float GetCost(string arrowhead, string arrowtail, double arrowlength)
+{
+    float a = 0;
+    float b = 0;
+    double c = 0;
+    float totalCost = 0;
+    switch (arrowhead) { 
+        case "steel": a = 10; break;
+        case "wood": a = 3; break;
+        case "obsidian": a = 5; break;
+    }
+    switch (arrowtail)
+    {
+        case "plastic": b = 10; break;
+        case "turkey feathers": b = 5; break;
+        case "goose feathers": b = 3; break;
+    }
+    c = arrowlength * 0.05;
+    
+    return totalCost =  (float)(a + b + c);
+}
