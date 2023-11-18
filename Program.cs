@@ -540,6 +540,13 @@ enum Seasoning { Spicy, Salty, Sweet }
 
 Arrow newArrow = new Arrow();
 Arrow anotherArrow = new Arrow("steel", "plastic", 50);
+Arrow eliteArrow = Arrow.CreateEliteArrow();
+Arrow beginnerArrow = Arrow.CreateBeginnerArrow();
+Arrow marksmanArrow = Arrow.CreateMarksmanArrow();
+
+Console.WriteLine(eliteArrow.ArrowHead);
+Console.WriteLine(beginnerArrow.ArrowLength);
+Console.WriteLine(marksmanArrow.ArrowTail);
 
 while (true){
     Console.Write("Choose an arrowhead - steel, wood or obsidian. ");
