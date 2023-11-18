@@ -544,17 +544,19 @@ Arrow newArrow = new Arrow();
 while (true)
 {
     Console.Write("Choose an arrowhead - steel, wood or obsidian. ");
-    newArrow.SetArrowHead(Console.ReadLine().ToLower());
+    newArrow.ArrowHead = Console.ReadLine().ToLower();
 
     Console.Write("Choose a fletching type - plastic, turkey feathers or goose feathers. ");
-    newArrow.SetArrowTail(Console.ReadLine().ToLower());
+    newArrow.ArrowTail = Console.ReadLine().ToLower();
 
     Console.WriteLine("Choose a length in CM.");
-    newArrow.SetArrowLength(Convert.ToInt32(Console.ReadLine()));
+    newArrow.ArrowLength = Convert.ToInt32(Console.ReadLine());
 
-    float finalCost = GetCost(newArrow.GetArrowHead(), newArrow.GetArrowTail(), newArrow.GetArrowLength());
+    float finalCost = GetCost(newArrow.ArrowHead, newArrow.ArrowTail, newArrow.ArrowLength);
 
     Console.WriteLine($"The final cost will be {finalCost}");
+
+ 
 }
 float GetCost(string arrowhead, string arrowtail, int arrowlength)
 {
