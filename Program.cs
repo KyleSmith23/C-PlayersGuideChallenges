@@ -559,17 +559,10 @@ while (true){
 float GetCost(string arrowhead, string arrowtail, int arrowlength){
     float a = 0;
     float b = 0;
-    
-    switch (arrowhead) { 
-        case "steel": a = 10; break;
-        case "wood": a = 3; break;
-        case "obsidian": a = 5; break;
-    }
-    switch (arrowtail)    {
-        case "plastic": b = 10; break;
-        case "turkey feathers": b = 5; break;
-        case "goose feathers": b = 3; break;
-    }
+
+    a = arrowhead switch { "steel" => 10, "wood" => 3, "obsidian" => 5, _ => 10};
+    b = arrowtail switch { "plastic" => 10, "turkey feathers" => 5, "goose feathers" => 3, _=> 10};
+   
     double c = arrowlength * 0.05;
     
     return (float)(a + b + c);
