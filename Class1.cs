@@ -1,8 +1,8 @@
 ﻿class Arrow
 {
-    public string arrowHead;
-    public string arrowTail;
-    public int arrowLength;
+    private string arrowHead;
+    private string arrowTail;
+    private int arrowLength;
 
     public Arrow() { }
     public Arrow (string head,  string tail, int length)
@@ -11,4 +11,13 @@
         arrowTail = tail;
         arrowLength = length;
     }
+
+    public string GetArrowHead() => arrowHead;
+    public string GetArrowTail() => arrowTail; 
+    public int GetArrowLength() => arrowLength;
+
+    public string SetArrowHead(string input) => arrowHead = input;
+    public string SetArrowTail(string input) => arrowTail = input;
+
+    public int SetArrowLength(int value) => arrowLength = value;
 }
