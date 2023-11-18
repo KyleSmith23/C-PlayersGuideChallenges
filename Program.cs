@@ -539,10 +539,9 @@ enum Seasoning { Spicy, Salty, Sweet }
 // Level 18 Vin Fletcher's Arrows
 
 Arrow newArrow = new Arrow();
+Arrow anotherArrow = new Arrow("steel", "plastic", 50);
 
-
-while (true)
-{
+while (true){
     Console.Write("Choose an arrowhead - steel, wood or obsidian. ");
     newArrow.ArrowHead = Console.ReadLine().ToLower();
 
@@ -555,27 +554,23 @@ while (true)
     float finalCost = GetCost(newArrow.ArrowHead, newArrow.ArrowTail, newArrow.ArrowLength);
 
     Console.WriteLine($"The final cost will be {finalCost}");
-
- 
+    Console.WriteLine(anotherArrow.ArrowHead); 
 }
-float GetCost(string arrowhead, string arrowtail, int arrowlength)
-{
+float GetCost(string arrowhead, string arrowtail, int arrowlength){
     float a = 0;
     float b = 0;
-    double c = 0;
-    float totalCost = 0;
+    
     switch (arrowhead) { 
         case "steel": a = 10; break;
         case "wood": a = 3; break;
         case "obsidian": a = 5; break;
     }
-    switch (arrowtail)
-    {
+    switch (arrowtail)    {
         case "plastic": b = 10; break;
         case "turkey feathers": b = 5; break;
         case "goose feathers": b = 3; break;
     }
-    c = arrowlength * 0.05;
+    double c = arrowlength * 0.05;
     
-    return totalCost =  (float)(a + b + c);
+    return (float)(a + b + c);
 }
