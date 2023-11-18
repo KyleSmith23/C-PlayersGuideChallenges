@@ -557,13 +557,8 @@ while (true){
     Console.WriteLine(anotherArrow.ArrowHead); 
 }
 float GetCost(string arrowhead, string arrowtail, int arrowlength){
-    float a = 0;
-    float b = 0;
-
-    a = arrowhead switch { "steel" => 10, "wood" => 3, "obsidian" => 5, _ => 10};
-    b = arrowtail switch { "plastic" => 10, "turkey feathers" => 5, "goose feathers" => 3, _=> 10};
-   
+    float a = arrowhead switch { "steel" => 10, "wood" => 3, "obsidian" => 5, _ => 10};
+    float b = arrowtail switch { "plastic" => 10, "turkey feathers" => 5, "goose feathers" => 3, _=> 10};
     double c = arrowlength * 0.05;
-    
     return (float)(a + b + c);
 }
